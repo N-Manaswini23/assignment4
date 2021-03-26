@@ -133,11 +133,11 @@ https://github.com/N-Manaswini23/assignment4/blob/main/assignment4.tex
 %
 
 \section*{GATE 2021 XE-A QUESTION 7(pg:9)}
-A person who speaks truth 3 out of 4 times,throws a fair dice with six faces and informs the outcome is 5.The probability that the outcome is really 5 is
+A person who speaks truth $3$ out of $4$ times,throws a fair dice with six faces and informs the outcome is $5$.The probability that the outcome is really $5$ is
 \section*{SOLUTION}
-Let X $\epsilon$ $ \{0,1\}$ represent the random variable,where 0 represents person speaking false,1 represents person speaking truth.\\
-Let Y $\epsilon$ $ \{0,1\}$  represent random variable,where 0 represents person informs outcome of dice is not 5,\\
-1 represents person informs  outcome of dice is 5.
+Let $X \in \{0,1\}$ represent the random variable,where $0$ represents person speaking false,$1$ represents person speaking truth.\\
+Let $Y \in \{0,1\}$  represent random variable,where $0$ represents person informs outcome of dice is not $5$,\\
+$1$ represents person informs  outcome of dice is $5$.
 
 \begin{table}[h!]
 \resizebox{9cm}{!}
@@ -153,20 +153,20 @@ $ \pr{X=0} $ & Probability of person\\
 & speaking false\\
 \hline
 $\pr{Y=1}$ & Event that person informs\\
-& outcome of dice is 5 \\
+& outcome of dice is $5$ \\
 \hline
 $\pr{Y=1|X=1}$ & Probability of person \\
-&  informing outcome is 5\\
+&  informing outcome is $5$\\
 & if person speaks truth\\
 \hline
 $\pr{Y=1|X=0}$ & Probability of person\\
-& informing outcome is 5\\
+& informing outcome is $5$\\
 & if person speaks false\\ 
 \hline
 $\pr{X=1|Y=1}$ & Probability of person\\
 &  speaking truth(outcome  \\
-& is 5)if person informs \\
-&outcome is 5\\
+& is $5$)if person informs \\
+&outcome is $5$\\
 \hline
 \end{tabular}
 }
@@ -204,14 +204,14 @@ Substiting values from table \eqref{tab:2} in \eqref{1}
 \begin{align}
 \pr{Y=1} &= \frac{1}{6} \times \frac{3}{4}  + \frac{5}{6} \times \frac{1}{4} \\
 &=\frac{8}{24} \label{2} \\
-\pr{(X=1)(Y=1)}&= \pr{Y=1|X=1} \notag \\
+\pr{X=1 \cap Y=1}&= \pr{Y=1|X=1} \notag \\
 & \times \pr{X=1} \\ 
 &= \frac{1}{6} \times \frac{3}{4} \\
 &= \frac{3}{24}  \label{3}
 \end{align}
 We need to find $\pr{X=1|Y=1}$ 
 \begin{align}
-\pr{X=1|Y=1} &= \frac{\pr{(X=1)(Y=1)}}{\pr{Y=1}} \\
+\pr{X=1|Y=1} &= \frac{\pr{X=1 \cap Y=1}}{\pr{Y=1}} \\
 &= \frac{\frac{3}{24}}{\frac{8}{24}} \\
 &=\frac{3}{8}
 \end{align}
