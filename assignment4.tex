@@ -136,37 +136,29 @@ https://github.com/N-Manaswini23/assignment4/blob/main/assignment4.tex
 A person who speaks truth $3$ out of $4$ times,throws a fair dice with six faces and informs the outcome is $5$.The probability that the outcome is really $5$ is
 \section*{SOLUTION}
 Let $X \in \{0,1\}$ represent the random variable,where $0$ represents person speaking false,$1$ represents person speaking truth.\\
-Let $Y \in \{0,1\}$  represent random variable,where $0$ represents person informs outcome of dice is not $5$,\\
-$1$ represents person informs  outcome of dice is $5$.
+Let $Y \in \{1,2,3,4,5,6\}$  represent random variable,where $1,2,3,4,5,6$ represents person informs outcome of dice is $1,2,3,4,5,6$,respectively.\\
+
 
 \begin{table}[h!]
 \resizebox{9cm}{!}
 { 
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-Event & definition \\
+Event & definition & value\\
 \hline
-$ \pr{X=1} $ & Probability of person \\
-&speaking truth\\
+$ \pr{X=1} $ & Probability of person  & $\frac{3}{4}$\\
+&speaking truth & \\
 \hline
-$ \pr{X=0} $ & Probability of person\\
-& speaking false\\
+$ \pr{X=0} $ & Probability of person & $\frac{1}{4}$ \\
+& speaking false & \\
 \hline
-$\pr{Y=1}$ & Event that person informs\\
-& outcome of dice is $5$ \\
+$\pr{Y=5|X=1}$ & Probability of person  & \\
+&  informing outcome is $5$ & $\frac{1}{6}$  \\
+& if person speaks truth & \\
 \hline
-$\pr{Y=1|X=1}$ & Probability of person \\
-&  informing outcome is $5$\\
-& if person speaks truth\\
-\hline
-$\pr{Y=1|X=0}$ & Probability of person\\
-& informing outcome is $5$\\
-& if person speaks false\\ 
-\hline
-$\pr{X=1|Y=1}$ & Probability of person\\
-&  speaking truth(outcome  \\
-& is $5$)if person informs \\
-&outcome is $5$\\
+$\pr{Y=5|X=0}$ & Probability of person & \\
+& informing outcome is $5$ &  $\frac{5}{6}$ \\
+& if person speaks false & \\ 
 \hline
 \end{tabular}
 }
@@ -174,50 +166,26 @@ $\pr{X=1|Y=1}$ & Probability of person\\
 \label{tab:1}
 \end{table}
 
-\begin{table}[h!]
-\resizebox{7cm}{!}
-{ 
-\begin{tabular}{|c|c|}
-\hline
-Probability & value \\
-\hline
-$\pr{X=1}$ & $\frac{3}{4}$ \\
-\hline
-$\pr{X=0}$ &  $\frac{1}{4}$ \\
- \hline
-$\pr{Y=1|X=1}$ & $\frac{1}{6}$ \\
-\hline
-$\pr{Y=1|X=0}$  &  $\frac{5}{6}$ \\
-\hline
-\end{tabular}
-}
-\caption{Table 2} 
-\label{tab:2}
-\end{table}
 
 From Baye's theorem
 \begin{align}
-\pr{Y=1}&=\pr{Y=1|X=1} \times \pr{X=1} \notag \\
- & +\pr{Y=1|X=0} \times \pr{X=0}  \label{1}
-\end{align}
-Substiting values from table \eqref{tab:2} in \eqref{1}
+\pr{Y=5}&=\pr{Y=5|X=1} \times \pr{X=1} \notag \\
+ & +\pr{Y=5|X=0} \times \pr{X=0}  \label{1}
+ \end{align}
+Substiting values from table \eqref{tab:1} in \eqref{1}
 \begin{align}
-\pr{Y=1} &= \frac{1}{6} \times \frac{3}{4}  + \frac{5}{6} \times \frac{1}{4} \\
-&=\frac{8}{24} \label{2} \\
-\pr{X=1 \cap Y=1}&= \pr{Y=1|X=1} \notag \\
+\pr{Y=5} &=\frac{8}{24} \label{2} \\
+\pr{(X=1)(Y=5)}&= \pr{Y=5|X=1} \notag \\
 & \times \pr{X=1} \\ 
-&= \frac{1}{6} \times \frac{3}{4} \\
 &= \frac{3}{24}  \label{3}
 \end{align}
-We need to find $\pr{X=1|Y=1}$ 
+We need to find $\pr{X=1|Y=5}$ \\
 \begin{align}
-\pr{X=1|Y=1} &= \frac{\pr{X=1 \cap Y=1}}{\pr{Y=1}} \\
-&= \frac{\frac{3}{24}}{\frac{8}{24}} \\
+\pr{X=1|Y=5} &= \frac{\pr{(X=1 ) (Y=5)}}{\pr{Y=5}} \\
 &=\frac{3}{8}
 \end{align}
 
- $\therefore$ The desired probability that outcome is really 5 $= \frac{3}{8}=0.375$ \\ \\
- P.T.O \\
+ $\therefore$ The desired probability that outcome is really 5 $= \frac{3}{8}=0.375$ \\
 \begin{figure}[htb!]
 \begin{center}
 \includegraphics[width=0.5\textwidth]{assignment_4_dice_sim.png}
